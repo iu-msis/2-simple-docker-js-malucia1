@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+  <title>Belle's Enchanted Libary</title>
+  <link rel="stylesheet" href="css\site.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<main>
+<div class="home_body">
+<div class="container-fluid sticky-top">
+  <header class="sticky-top">
+      <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <h1 class="h1_header header_nav">Belle's Enchanted Library</h1>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="featured_books.html">Featured Books </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user_profile.html">My Profile </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<div class ="container-fluid home_body">
+  <body>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 books">
+        <h1>The Enchanted Books</h1>
+          <div class="table container">
+            <table id="sortTable" class="table table-bordered table-striped table-hover table-condensed">
+              <thead>
+                <tr>
+                  <th class="col-xs-2" id="tbooks">Book Title</th>
+                  <th class="col-xs-2" id="tbooks">Book Author</th>
+                  <th class="text-center col-xs-1" id="tbooks">Year Published</th>
+                  <th class="text-center col-xs-2" id="tbooks">Publisher</th>
+                  <th class="text-center col-xs-1" id="tbooks">Page Count</th>
+                  <th class="text-center col-xs-1" id="tbooks">MSRP</th>
+                </tr>
+              </thead>
+              <tbody class="itable" id="tbooks">
+                <tr>
+                  <td>Romeo and Juliet</td>
+                  <td>William Shakespeare</td>
+                  <td>1597</td>
+                  <td>Simon & Schuster</td>
+                  <td>368</td>
+                  <td>$9.99</td>
+                <tr>
+                  <td>A Christmas Carol</td>
+                  <td>Charles Dickens</td>
+                  <td>1843</td>
+                  <td>Chapman & Hall</td>
+                  <td>110</td>
+                  <td>$6.99</td>
+                </tr>
+                <tr>
+                  <td>The Great Gatsby</td>
+                  <td>F. Scott Fitzgerald</td>
+                  <td>1925</td>
+                  <td>Charles Scribner's Sons</td>
+                  <td>218</td>
+                  <td>$13.99</td>
+                </tr>
+                <tr>
+                  <td>Go Dog Go</td>
+                  <td>P. D. Eastman</td>
+                  <td>1961</td>
+                  <td> Random House Books for Young Readers</td>
+                  <td>64</td>
+                  <td>4.99</td>
+                </tr>
+                <tr>
+                  <td>The Adventures of Huckleberry Finn</td>
+                  <td>Mark Twain</td>
+                  <td>1884</td>
+                  <td>	Chatto & Windus</td>
+                  <td>366</td>
+                  <td>10.99</td>
+                </tr>
+                <tr>
+                  <td>Where the Wild Things Are</td>
+                  <td>Beatrix Potter</td>
+                  <td>1963</td>
+                  <td>Harper</td>
+                  <td>40</td>
+                  <td>4.99</td>
+                </tr>
+                <tr>
+                  <td>The Lion, The Witch, and The Wardrobe</td>
+                  <td>C.S. Lewis</td>
+                  <td>1950</td>
+                  <td>Ishi Press</td>
+                  <td>206</td>
+                  <td>17.99</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 ">
+    <form>
+    <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputTitle">Title</label>
+      <input type="title" class="form-control" id="inputTitle">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputAuthor">Author</label>
+      <input type="password" class="form-control" id="inputAuthor">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputDate">Date Published</label>
+    <input type="text" class="form-control" id="inputDate">
+  </div>
+  <div class="form-group">
+    <label for="inputPublisher">Publisher</label>
+    <input type="text" class="form-control" id="inputPublisher">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputPages">Page Count</label>
+      <input type="text" class="form-control" id="inputPages">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPrice">MSRP</label>
+      <input type="text" class="form-control" id="inputPrice">
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Add Book</button>
+</form>
+    </div>
+  </div>
+
+  </body>
+  </div>
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- //http://tristen.ca/tablesort/demo // -->
+  <script src="js/tablesort.min.js"></script>
+  <script>
+    new Tablesort(document.getElementById('sortTable'));
+  </script>
+</html>

@@ -1,0 +1,129 @@
+header {
+    background-color: #2E86C1;
+    margin:0px;
+}
+
+.h1_header {
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    display: inline-block;
+}
+
+#nav {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background-color: white;
+    font-weight: bold;
+}
+
+#navli {
+    color: #015C92;
+}
+
+.home_body{
+  background-color: #D6EAF8;
+}
+.h3_home{
+    display: inline-block;
+    padding-top: 10px;
+    text-align: center;
+}
+.header_nav{
+    display: inline-block;
+}
+
+.home_stories{
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: #2E86C1;
+    border-radius:7px;
+    left: 2%;
+    margin: 10px;
+    height: 400px;
+}
+
+.about_us{
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #2E86C1;
+  width: 50%;
+  border-radius:7px;
+  left: 2%;
+  height: 200px;
+  margin: 10px;
+}
+
+.books{
+  display: inline-block;
+  text-align: center;
+  color: white;
+  background-color: #2E86C1;
+  width: 50%;
+  border-radius:7px;
+  left: 2%;
+  margin: 10px;
+}
+
+#tbooks{
+  color: white;
+  align-content: center;
+}
+
+.profile{
+
+  text-align: center;
+  color: white;
+  background-color: #2E86C1;
+  border-radius:7px;
+  left: 25%;
+  margin: 10px;
+}
+
+#profile_pic{
+  padding-left: 150px;
+  left: 10%;
+}
+
+#email{
+  color: white;
+}
+
+th[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+th[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: #404040 transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+th[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+th[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+th[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}
