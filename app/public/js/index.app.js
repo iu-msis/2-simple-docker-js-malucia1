@@ -33,7 +33,7 @@ var app = new Vue({
             var userData = data.results;
             console.log(userData);
             this.userName = userData.name.first + " " + userData.name.last;
-            this.userOrigin = userData.country;
+            this.userOrigin = userData.location.country;
             this.userDOB = userData.dob.date;
             this.userAge = userData.dob.age;
             this.userEmail = userData.email;
