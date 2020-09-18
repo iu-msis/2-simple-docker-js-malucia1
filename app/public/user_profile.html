@@ -55,7 +55,7 @@
         <h4>From: {{ userOrigin }}</h4><br>
         <h4>DoB: {{ formatDate(userDOB) }}</h4><br>
         <h4>Age: {{ userAge }}</h4><br>
-        <h4>Email:</h4><a href="mailto:userEmail" id="email">{{ userEmail }}</a>
+        <h4>Email:</h4><a v-bind:href="'mailto:' + userEmail" id="email">{{ userEmail }}</a>
 
       <!-- Regenerate Random User By Button -->
       <!-- <button v-on:click="regenerate()">New User</button> -->
