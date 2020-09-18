@@ -5,6 +5,7 @@
   <!-- My StyleSheet and Bootstrap Link -->
   <link rel="stylesheet" href="css\site.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="js/moment.js"></script>
 </head>
 
 <main>
@@ -49,10 +50,10 @@
           <img v-bind:src="userThumbnail" width=128px; height=128px>
         </a>
         <h2>{{ userName }}</h2>
-      </div>
+        </div>
 
-        <h4>{{ userOrigin }}</h4><br>
-        <h4>DoB: {{ userDOB }}</h4><br>
+        <h4>From: {{ userOrigin }}</h4><br>
+        <h4>DoB: {{ formatDate(userDOB) }}</h4><br>
         <h4>Age: {{ userAge }}</h4><br>
         <h4>Email:</h4><a href="mailto:userEmail" id="email">{{ userEmail }}</a>
 
@@ -66,6 +67,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/index.app.js"></script>
+
 
   </body>
   </div>
