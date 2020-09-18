@@ -2,27 +2,23 @@
 <html>
 <head>
   <title>Belle's Enchanted Libary</title>
+  <!-- My StyleSheet and Bootstrap Link -->
   <link rel="stylesheet" href="css\site.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 
 <main>
 <div class="home_body">
-<div class="container-fluid sticky-top">
+<div class="container-fluid">
   <header class="sticky-top">
       <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <h1 class="h1_header header_nav">Belle's Enchanted Library</h1>
       </div>
-
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -40,37 +36,38 @@
             </li>
           </ul>
         </div>
-      </nav>
+        </nav>
+      </div>
+    </header>
     </div>
-  </header>
-</div>
 
 <div class ="container-fluid home_body">
   <body>
-    <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="profile_pic">
-      <a target="_blank" href="img/profile_photo_fake.jpg">
-        <img src='img/profile_photo_fake.jpg' width=200px; height=200px>
-      </a><br>
-      <p>https://randomuser.me/photos</p>
-
-    </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 about_us">
-        <h2>Mary Poppins</h2>
-        <p>United Kingdom</p>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile"  id="userInfo">
+        <div class="row">
+        <a v-bind:href="userImage" id="profile_pic">
+          <img v-bind:src="userThumbnail" width=128px; height=128px>
+        </a>
+        <h2>{{ userName }}</h2>
       </div>
+        <p>{{ userOrigin }}</p><br>
+        <h4>DoB: {{ userDOB }}</h4><br>
+        <h4>Age: {{ userAge }}</h4><br>
+        <h4>Email:</h4><a href="mailto:userEmail" id="email">{{ userEmail }}</a>
+      <!-- Regenerate Random User By Button -->
+      <!-- <button v-on:click="regenerate()">New User</button> -->
     </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 profile">
-        <h3>DOB</h3><p>07/25/1991</p>
-        <h3>AGE</h3><p>29</p>
-        <h3>EMAIL</h3><a href="mailto:mary_poppins@godisney.com" id="email">mary_poppins@godisney.com</a>
-      </div>
     </div>
+    <!-- JQuery, JS scripts links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.app.js"></script>
 
   </body>
   </div>
+</div>
 </div>
 </main>
 </html>
