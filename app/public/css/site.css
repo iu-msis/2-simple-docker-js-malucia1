@@ -101,6 +101,12 @@ header {
   color: white;
 }
 
+#newUser{
+  background-color: white;
+  color: #2E86C1;
+  border: #2E86C1;
+}
+
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }

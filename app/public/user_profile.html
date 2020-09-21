@@ -57,7 +57,7 @@
         <h4>Age: {{ userAge }}</h4><br>
         <h4>Email:</h4><a v-bind:href="'mailto:' + userEmail" id="email">{{ userEmail }}</a>
         <br>
-        <button @click="fetchUser">Refresh New User</button>
+        <button @click="fetchUser" id="newUser">Refresh New User</button>
 
       <!-- Regenerate Random User By Button -->
       <!-- <button v-on:click="regenerate()">New User</button> -->
