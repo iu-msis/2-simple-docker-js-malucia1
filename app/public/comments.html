@@ -45,36 +45,35 @@
     </div>
     </div>
   </header>
-  </div>
-    <div id="commentsTableID" class ="container-fluid home_body">
+
     <div class="row">
-      <div class="col-xs-12 books">
+      <div  id="commentsTableID" class="col-xs-12 books">
         <h1>Comments</h1>
           <div class="table container">
             <table id="commentTable" class="table table-bordered table-striped table-hover table-condensed">
               <tbody class="itable" id="commentTableBody">
-                <tr v-for="comment in comments">
+                <tr v-for="comment in commentList">
                   <td>{{comment.commentText}}</td>
                 </tr>
               </tbody>
             </table>
           </div>
-        <form v:on:submit.prevent="createComment()" id="newCommentForm">
-          <div class="form-row">
-            <div class="form-group col-md-12">
-              <label for="commentText">Write a Comment</label>
-              <input type="text" v-model="commentText.commentNew" class="form-control" id="commentText">
-            </div>
-          </div>
-          <br>
-          <button type="submit" value="Submit Comment" class="btn btn-primary" id="submitNewComment">Submit Comment</button>
-        </form>
-      </div>
-  </div>
-  </div>
-</div>
-</body>
+        </div>
+        </div>
 
+
+        <form method="post"  id="newCommentForm">
+        <div class="form-group col-md-6">
+            <label for="commentText">Write a Comment</label>
+            <textarea v-model="commentText.commentNew" class="form-control" id="commentText"></textarea>
+        </div>
+        <br>
+        <button type="submit" v:on:submit.prevent="createComment()" class="btn btn-primary" id="submitNewComment">Submit Comment</button>
+        </form>
+
+    </div>
+    </body>
+</div>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
