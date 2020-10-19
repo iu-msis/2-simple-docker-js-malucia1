@@ -1,4 +1,4 @@
-MYSQL_DATABASE=msis 
+MYSQL_DATABASE=msis
 MYSQL_HOST=msis.csido2iwm7ec.us-east-1.rds.amazonaws.com
 MYSQL_USER=admin
 MYSQL_PASSWORD=ccmmcml6
