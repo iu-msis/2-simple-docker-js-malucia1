@@ -2,16 +2,16 @@ commentsApp = new Vue ({
   el: '#commentsTableID',
   data: {
     comments: [{
-      commentID: '',
-      newComment: '',
+      id: '',
+      commentText: '',
     }],
     commentNew: {
-      commentID: '',
-      newComment: '',
+      id: '',
+      commentText: '',
     }
   },
   methods: {
-    fetchComment(){
+    fetchUser(){
       fetch('api/comments/')
       .then(response => response.json())
       .then(json +. {
@@ -20,8 +20,7 @@ commentsApp = new Vue ({
       });
     },
     createComment(){
-      this.commentNew.commentID (this.commentNew.newComment);
-      fetch('api/comments/comments.php', {
+      fetch('api/comments/create.php', {
         method: 'POST',
         body: JSON.stringify(this.commentNew),
         headers: {
@@ -39,11 +38,11 @@ commentsApp = new Vue ({
     },
     commentNewData(){
       return{
-        commentID: '',
-        newComment: ''
+        id: '',
+        commentText: ''
       }
     },
     created(){
-      this.fetchComments();
+      this.fetchUser();
     }
 });

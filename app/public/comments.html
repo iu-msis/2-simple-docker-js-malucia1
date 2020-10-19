@@ -8,6 +8,7 @@
 
 <main>
 <div class="home_body">
+<body>
 <div class="container-fluid sticky-top">
   <header class="sticky-top">
       <div class="row">
@@ -39,49 +40,47 @@
         </div>
       </nav>
     </div>
+    </div>
   </header>
-</div>
-
-<div class ="container-fluid home_body">
-  <body>
-
+  </div>
+    <div id="commentsTableID" class ="container-fluid home_body">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 books">
+      <div class="col-xs-12 books">
         <h1>Comments</h1>
           <div class="table container">
-            <table id="sortTable commentTable" v-for="comment in comments" class="table table-bordered table-striped table-hover table-condensed">
+            <table id="sortTable commentTable" class="table table-bordered table-striped table-hover table-condensed">
               <tbody class="itable" id="commentTableBody">
-                <tr>
-                  <td>{{comments.newComment}}</td>
+                <tr v-for="comment in comments">
+                  <td>{{comment.commentText}}</td>
                 </tr>
-            </div>
-        </div>
-      </div>
-
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 ">
+              </tbody>
+            </table>
+          </div>
         <form v:on:submit.prevent="createComment()" id="newCommentForm">
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="commentText">Write a Comment</label>
-              <input type="text" v-model="commentNew.newComment" class="form-control" id="commentText">
+              <input type="text" v-model="commentNew.commentText" class="form-control" id="commentText">
             </div>
           </div>
           <br>
           <button type="submit" value="Submit Comment" class="btn btn-primary" id="submitNewComment">Submit Comment</button>
         </form>
       </div>
-    </div>
-
-  </body>
+  </div>
   </div>
 </div>
+  </body>
+
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- //http://tristen.ca/tablesort/demo // -->
+  <script src="js/comments.app.js"></script>
   <script src="js/tablesort.min.js"></script>
   <script>
     new Tablesort(document.getElementById('sortTable'));
