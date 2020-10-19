@@ -59,11 +59,12 @@
               </tbody>
             </table>
           </div>
+
         <form v:on:submit.prevent="createComment()" id="newCommentForm">
           <div class="form-row">
             <div class="form-group col-md-12">
               <label for="commentText">Write a Comment</label>
-              <input type="text" v-model="commentNew.commentText" class="form-control" id="commentText">
+              <input type="text" v-model="commentText.commentNew" class="form-control" id="commentText">
             </div>
           </div>
           <br>
@@ -73,8 +74,7 @@
   </div>
   </div>
 </div>
-  </body>
-
+</body>
 
 </main>
 
