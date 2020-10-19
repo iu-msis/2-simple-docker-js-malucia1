@@ -14,7 +14,7 @@ commentsApp = new Vue ({
     fetchUser(){
       fetch('api/comments/')
       .then(response => response.json())
-      .then(json +. {
+      .then(json => {
         this.comments=json;
         console.log(this.comments);
       });

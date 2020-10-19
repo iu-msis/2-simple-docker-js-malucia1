@@ -36,6 +36,9 @@
             <li class="nav-item">
               <a class="nav-link" href="user_profile.html">My Profile </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comments.html">Comments</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -48,7 +51,7 @@
       <div class="col-xs-12 books">
         <h1>Comments</h1>
           <div class="table container">
-            <table id="sortTable commentTable" class="table table-bordered table-striped table-hover table-condensed">
+            <table id="commentTable" class="table table-bordered table-striped table-hover table-condensed">
               <tbody class="itable" id="commentTableBody">
                 <tr v-for="comment in comments">
                   <td>{{comment.commentText}}</td>
@@ -81,8 +84,5 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- //http://tristen.ca/tablesort/demo // -->
   <script src="js/comments.app.js"></script>
-  <script src="js/tablesort.min.js"></script>
-  <script>
-    new Tablesort(document.getElementById('sortTable'));
-  </script>
+
 </html>
