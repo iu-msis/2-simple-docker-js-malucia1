@@ -54,7 +54,7 @@
           <div class="table container">
             <table id="commentTable" class="table table-bordered table-striped table-hover table-condensed">
               <tbody id="commentTableBody">
-                <tr v-for="comment in commentList" id="comments">
+                <tr v-for="comment in commentArray" id="comments">
                   <td>{{comment.commentText}}</td>
                 </tr>
               </tbody>
@@ -66,7 +66,7 @@
         <form id="newCommentForm" v-on:submit.prevent="createComment()">
         <div class="form-group col-md-6">
             <label for="comment">Write a Comment</label>
-            <input type="textarea" v-model="newComment.commentText" class="form-control" id="commentText">
+            <input type="textarea" v-model="commentNew.commentText" class="form-control" id="commentText">
         </div>
         <br>
             <input type="submit" value="Create New Comment" class="button" id="submitNewComment">

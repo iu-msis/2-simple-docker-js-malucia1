@@ -1,11 +1,11 @@
 var app = new Vue({
   el: '#comments',
   data: {
-    commentList: [{
+    commentArray: [{
       id: '',
       commentText: ''
     }],
-    newComment: {
+    commentNew: {
       id: '',
       commentText: ''
     }
@@ -16,15 +16,15 @@ var app = new Vue({
       fetch('api/comments/')
       .then(response => response.json())
       .then(json => {
-        this.commentList=json;
-        console.log(this.commentList);
+        this.commentArray=json;
+        console.log(this.commentArray);
       });
     },
 
     createComment() {
       fetch('api/comments/create.php', {
         method:'POST',
-        body: JSON.stringify(this.newComment),
+        body: JSON.stringify(this.commentNew),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
@@ -32,12 +32,12 @@ var app = new Vue({
       .then( response => response.json() )
       .then( json => {
         console.log("Returned from post:", json);
-        this.commentList = json;
-        this.newComment = this.newCommentData();
+        this.commentArray = json;
+        this.commentNew = this.newCommentData();
       });
 
       console.log("Creating (POSTing)...!");
-      console.log(this.newComment);
+      console.log(this.commentNew);
     },
     newCommentData() {
       return {
