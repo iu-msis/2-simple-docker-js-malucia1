@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Belle's Enchanted Libary</title>
-  <link rel="stylesheet" href="css\site.css">
+  <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <main>
-<div class="home_body">
+
 <body>
+<div class="home_body">
 <div class="container-fluid sticky-top">
   <header class="sticky-top">
       <div class="row">
@@ -46,13 +47,14 @@
     </div>
   </header>
 
+  <div id="comments">
     <div class="row">
-      <div  id="commentsTableID" class="col-xs-12 books">
+      <div class="col-xs-12 books">
         <h1>Comments</h1>
           <div class="table container">
             <table id="commentTable" class="table table-bordered table-striped table-hover table-condensed">
-              <tbody class="itable" id="commentTableBody">
-                <tr v-for="comment in commentList">
+              <tbody id="commentTableBody">
+                <tr v-for="comment in commentList" id="comments">
                   <td>{{comment.commentText}}</td>
                 </tr>
               </tbody>
@@ -61,26 +63,28 @@
         </div>
         </div>
 
-
-        <form method="post"  id="newCommentForm">
+        <form id="newCommentForm" v-on:submit.prevent="createComment()">
         <div class="form-group col-md-6">
-            <label for="commentText">Write a Comment</label>
-            <textarea v-model="commentText.commentNew" class="form-control" id="commentText"></textarea>
+            <label for="comment">Write a Comment</label>
+            <input type="textarea" v-model="newComment.commentText" class="form-control" id="commentText">
         </div>
         <br>
-        <button type="submit" v:on:submit.prevent="createComment()" class="btn btn-primary" id="submitNewComment">Submit Comment</button>
+            <input type="submit" value="Create New Comment" class="button" id="submitNewComment">
         </form>
 
     </div>
-    </body>
+  </div>
 </div>
+    </body>
+
 </main>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/comment.app.js"></script>
   <!-- //http://tristen.ca/tablesort/demo // -->
-  <script src="js/comments.app.js"></script>
+
 
 </html>
